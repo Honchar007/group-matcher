@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/group-matcher/static/css/main.21e849c8.css",
+    "main.js": "/group-matcher/static/js/main.bcb54df6.js",
+    "static/js/453.b60c3dd9.chunk.js": "/group-matcher/static/js/453.b60c3dd9.chunk.js",
+    "static/media/NunitoSans-LightItalic.ttf": "/group-matcher/static/media/NunitoSans-LightItalic.cbf912d5470dd9f8a14a.ttf",
+    "static/media/NunitoSans-ExtraBoldItalic.ttf": "/group-matcher/static/media/NunitoSans-ExtraBoldItalic.790b67dd9b1877bc7ee0.ttf",
+    "static/media/NunitoSans-BoldItalic.ttf": "/group-matcher/static/media/NunitoSans-BoldItalic.4b7ec965fd466fa665f3.ttf",
+    "static/media/NunitoSans-SemiBoldItalic.ttf": "/group-matcher/static/media/NunitoSans-SemiBoldItalic.d572c2f6ad962ddd43b9.ttf",
+    "static/media/NunitoSans-Italic.ttf": "/group-matcher/static/media/NunitoSans-Italic.1f985b9e0795cc82d409.ttf",
+    "static/media/NunitoSans-BlackItalic.ttf": "/group-matcher/static/media/NunitoSans-BlackItalic.5398a8d32e9c8fdeb680.ttf",
+    "static/media/NunitoSans-Light.ttf": "/group-matcher/static/media/NunitoSans-Light.4cffb0809d61ec7ecdff.ttf",
+    "static/media/NunitoSans-ExtraBold.ttf": "/group-matcher/static/media/NunitoSans-ExtraBold.910c4685fbefaf7b5410.ttf",
+    "static/media/NunitoSans-Bold.ttf": "/group-matcher/static/media/NunitoSans-Bold.f2f18c2e01d2f39c18c9.ttf",
+    "static/media/NunitoSans-Black.ttf": "/group-matcher/static/media/NunitoSans-Black.90bc2430c18ea1e0d3ee.ttf",
+    "static/media/NunitoSans-ExtraLightItalic.ttf": "/group-matcher/static/media/NunitoSans-ExtraLightItalic.91359f65448d21d8b339.ttf",
+    "static/media/NunitoSans-SemiBold.ttf": "/group-matcher/static/media/NunitoSans-SemiBold.19a4b6461d900f20a9a6.ttf",
+    "static/media/NunitoSans-Regular.ttf": "/group-matcher/static/media/NunitoSans-Regular.25d5a42e25da2f3ed7f4.ttf",
+    "static/media/NunitoSans-ExtraLight.ttf": "/group-matcher/static/media/NunitoSans-ExtraLight.c6f8529541b508535dc6.ttf",
+    "index.html": "/group-matcher/index.html",
+    "main.21e849c8.css.map": "/group-matcher/static/css/main.21e849c8.css.map",
+    "main.bcb54df6.js.map": "/group-matcher/static/js/main.bcb54df6.js.map",
+    "453.b60c3dd9.chunk.js.map": "/group-matcher/static/js/453.b60c3dd9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21e849c8.css",
+    "static/js/main.bcb54df6.js"
+  ]
+}
