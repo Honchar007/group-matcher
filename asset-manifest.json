@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/group-matcher/static/css/main.21e849c8.css",
+    "main.css": "/group-matcher/static/css/main.d87410d0.css",
     "main.js": "/group-matcher/static/js/main.bcb54df6.js",
     "static/js/453.b60c3dd9.chunk.js": "/group-matcher/static/js/453.b60c3dd9.chunk.js",
     "static/media/NunitoSans-LightItalic.ttf": "/group-matcher/static/media/NunitoSans-LightItalic.cbf912d5470dd9f8a14a.ttf",
@@ -18,12 +18,12 @@
     "static/media/NunitoSans-Regular.ttf": "/group-matcher/static/media/NunitoSans-Regular.25d5a42e25da2f3ed7f4.ttf",
     "static/media/NunitoSans-ExtraLight.ttf": "/group-matcher/static/media/NunitoSans-ExtraLight.c6f8529541b508535dc6.ttf",
     "index.html": "/group-matcher/index.html",
-    "main.21e849c8.css.map": "/group-matcher/static/css/main.21e849c8.css.map",
+    "main.d87410d0.css.map": "/group-matcher/static/css/main.d87410d0.css.map",
     "main.bcb54df6.js.map": "/group-matcher/static/js/main.bcb54df6.js.map",
     "453.b60c3dd9.chunk.js.map": "/group-matcher/static/js/453.b60c3dd9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21e849c8.css",
+    "static/css/main.d87410d0.css",
     "static/js/main.bcb54df6.js"
   ]
 }
