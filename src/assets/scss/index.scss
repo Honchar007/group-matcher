@@ -18,7 +18,16 @@ body {
     flex-direction: column;
     gap: 20px;
     margin: 0;
+    margin-bottom: 40px;
 
+    header {
+      color: var(--primary);
+      padding: 20px 0;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    }
     h1 {
       @include typo-h1;
       text-align: center;
@@ -29,74 +38,88 @@ body {
       margin: auto;
     }
 
+    @keyframes gradient-move {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
     .create-btn {
       width: 80%;
       margin: auto;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      background-size: 200% 200%;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      animation: gradient-move 3s infinite linear;
 
       &:hover {
-        box-shadow: 0px 0px 12px 0px var(--blue-500);
-        background-color: var(--primary);
-        
+        animation: gradient-move 1.5s infinite linear; // Ускорение при наведении
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+    
         .button-text {
           color: var(--white) !important;
         }
       }
+    
+      &:active {
+        transform: translateY(1px);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      }
     }
+    
+    
   }
 }
 
-:root[data-theme=dark] {
-  --white: #{$dark_white};
-  --primary: #{$dark_primary};
-  --blue-100: #{$dark_blue-100};
-  --blue-300: #{$dark_blue-300};
-  --blue-500: #{$dark_blue-500};
-  --gray-100: #{$dark_gray-100};
-  --gray-200: #{$dark_gray-200};
-  --gray-300: #{$dark_gray-300};
-  --gray-400: #{$dark_gray-400};
-  --gray-600: #{$dark_gray-600};
-  --gray-700: #{$dark_gray-700};
-  --gray-800: #{$dark_gray-800};
-  --black: #{$dark_black};
-  --black-rgba: #{$dark_black-rgba};
-  --red-200: #{$dark_red-200};
-  --green-200: #{$dark_green-200};
-  --blue-200: #{$dark_blue-200};
-  --yellow-200: #{$dark_yellow-200};
-  --light_rose: #{$dark_light_rose};
-  --light_apricot: #{$dark_light_apricot};
-  --double_colonial_white: #{$dark_double_colonial_white};
-  --tea_green: #{$dark_tea_green};
-  --jagged_ice: #{$dark_jagged_ice};
-  --error: #{$dark_error};
+:root[data-theme=light] {
+  --white: #{$light-background};
+  --primary: #{$light-primary};
+  --accent: #{$light-accent};
+  --text: #{$light-text};
+  --border: #{$light-border};
+  --success: #{$success};
+  --error: #{$light_error};
+  --warning: #{$warning};
+  --button-bg: #{$button-bg};
+  --button-text: #{$button-text};
+  --button-hover: #{$button-hover};
+  --card-bg: #{$card-bg};
+  --card-border: #{$card-border};
+  --input-bg: #{$input-bg};
+  --input-border: #{$input-border};
+  --input-text: #{$input-text};
+  --gray: #{$light_gray};
 }
 
-:root[data-theme=light] {
-  --white: #{$light_white};
-  --primary: #{$light_primary};
-  --blue-100: #{$light_blue-100};
-  --blue-300: #{$light_blue-300};
-  --blue-500: #{$light_blue-500};
-  --gray-100: #{$light_gray-100};
-  --gray-200: #{$light_gray-200};
-  --gray-300: #{$light_gray-300};
-  --gray-400: #{$light_gray-400};
-  --gray-600: #{$light_gray-600};
-  --gray-700: #{$light_gray-700};
-  --gray-800: #{$light_gray-800};
-  --black: #{$light_black};
-  --black-rgba: #{$light_black-rgba};
-  --red-200: #{$light_red-200};
-  --green-200: #{$light_green-200};
-  --blue-200: #{$light_blue-200};
-  --yellow-200: #{$light_yellow-200};
-  --light_rose: #{$light_light_rose};
-  --light_apricot: #{$light_light_apricot};
-  --double_colonial_white: #{$light_double_colonial_white};
-  --tea_green: #{$light_tea_green};
-  --jagged_ice: #{$light_jagged_ice};
-  --error: #{$light_error};
+:root[data-theme=dark] {
+  --white: #{$dark-background};
+  --primary: #{$dark-primary};
+  --accent: #{$dark-accent};
+  --text: #{$dark-text};
+  --border: #{$dark-border};
+  --success: #{$success};
+  --error: #{$dark_error};
+  --warning: #{$warning};
+  --button-bg: #{$dark-primary};
+  --button-text: #{$button-text};
+  --button-hover: darken($dark-primary, 10%);
+  --card-bg: #{$dark-background};
+  --card-border: #{$dark-border};
+  --input-bg: #{$dark-background};
+  --input-border: #{$dark-border};
+  --input-text: #{$dark-text};
+  --gray: #{$dark_gray};
 }
 
 .rose {

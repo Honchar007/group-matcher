@@ -11,25 +11,36 @@ interface ParticipantListProps {
 }
 
 const ParticipantList: React.FC<ParticipantListProps> = ({ participants }) => {
+  const morningParticipants = participants.filter((x) => x.group === 'Vormittag');
+  const afternoonParticipants = participants.filter((x) => x.group === 'Nachmittag');
+
   return (
     <div className="participant-list-wrapper">
       <h2>Teilnehmerliste</h2>
-      <div className="participant-list">
-        {participants.map((p, index) => (
-          <div className="participant-card" key={index}>
-            {index + 1}. {p.name} - {p.group}
+      
+      <div className="group-container">
+        <div className="group">
+          <h3>Vormittag ({morningParticipants.length})</h3>
+          <div className="participant-list">
+            {morningParticipants.map((p, index) => (
+              <div className="participant-card" key={index}>
+                {index + 1}. {p.name} - {p.group}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
 
-      <h2>
-        Teilnehmer des Vormittag -{' '}
-        {participants.filter((x) => x.group === 'Vormittag').length}
-      </h2>
-      <h2>
-        Teilnehmer des Nachmittag -{' '}
-        {participants.filter((x) => x.group === 'Nachmittag').length}
-      </h2>
+        <div className="group">
+          <h3>Nachmittag ({afternoonParticipants.length})</h3>
+          <div className="participant-list">
+            {afternoonParticipants.map((p, index) => (
+              <div className="participant-card" key={index}>
+                {index + 1}. {p.name} - {p.group}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

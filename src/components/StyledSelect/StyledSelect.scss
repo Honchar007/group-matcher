@@ -4,6 +4,7 @@
 .select {
   padding: 12px;
 }
+
 .button {
   @include typo-btn;
 
@@ -12,33 +13,35 @@
   align-items: center;
   width: 100%;
   padding: 12px 0;
-  border: 2px solid var(--blue-300);
+  border: 2px solid var(--border); // Используем --border для границы
   border-radius: 8px;
   transition: all 0.5s;
+
   .button-text {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: var(--gray-800);
+    color: var(--text); // Используем --text для цвета текста
   }
 
   &.primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
-    color: var(--white);
+    background-color: var(--button-bg); // Используем --button-bg для фона
+    border-color: var(--button-bg); // Используем тот же цвет для границы
+    color: var(--button-text); // Используем --button-text для цвета текста
 
     .button-text {
-      color: var(--white);
+      color: var(--button-text); // Текст будет белым, если --button-text белый
     }
   }
 
   &:hover {
-    border-color: var(--primary)
+    background-color: var(--button-hover); // Используем --button-hover для фона при наведении
+    border-color: var(--button-hover); // Изменяем цвет границы при наведении
   }
 
   &:disabled {
-    border-color: var(--blue-300);
-    background-color: var(--blue-300);
+    border-color: var(--border); // Используем --border для disabled состояния
+    background-color: var(--border); // Используем тот же цвет для фона
     cursor: default;
   }
 }

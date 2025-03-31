@@ -31,37 +31,54 @@ function StyledSelect({
   ...props
 }: SelectProps) {
   const customSelectStyles = {
-    control: (provided: any) => ({
+    control: (provided: any, state: { isFocused: boolean }) => ({
       ...provided,
-      background: 'var(--white)',
+      background: 'var(--white)', // Используем --white
       display: 'flex',
       flexWrap: 'nowrap',
-      borderColor: 'var(--gray-400)',
-      color: 'var(--black)',
+      borderColor: state.isFocused ? 'var(--primary)' : 'var(--border)',
+      boxShadow: state.isFocused ? '0 0 0 1px var(--primary)' : 'none',
+      color: 'var(--text)', // Используем --text
       width: typeof width === 'number' ? `${width}px` : width || '100%',
-      borderRadius: '8px',
-      height: '100%',
+      borderRadius: '8px', // Ракругленные углы
+      transition: 'all 0.3s', // Плавное изменение
+      '&:hover': {
+        borderColor: 'var(--primary)', // Используем --primary для hover эффекта
+      },
     }),
     menu: (provided: any) => ({
       ...provided,
-      background: 'var(--white)',
-      color: 'var(--black)',
-      borderColor: 'var(--gray-400)',
+      background: 'var(--white)', // Используем --white
+      color: 'var(--text)', // Используем --text
+      borderColor: 'var(--border)', // Используем --border
     }),
-    option: (provided: any, state: { isFocused: boolean }) => ({
+    option: (
+      provided: any,
+      state: { isFocused: boolean; isSelected: boolean }
+    ) => ({
       ...provided,
-      color: 'var(--black)',
-      backgroundColor: state.isFocused ? 'var(--gray-200)' : 'var(--white)',
+      color: state.isSelected ? 'var(--white)' : 'var(--text)', // Меняем цвет текста для выделенного элемента
+      backgroundColor: state.isSelected
+        ? 'var(--primary)'
+        : state.isFocused
+          ? 'var(--gray)'
+          : 'var(--white)', // Обычный фон
+      borderRadius: '6px',
+      transition: 'all 0.3s',
+      '&:hover': {
+        backgroundColor: 'var(--primary)', // Меняем фон при наведении
+        color: 'var(--white)',
+      },
     }),
     singleValue: (provided: any) => ({
       ...provided,
-      background: 'var(--white)',
-      color: 'var(--black)',
-      borderColor: 'var(--gray-400)',
+      background: 'var(--white)', // Используем --white
+      color: 'var(--text)', // Используем --text
+      borderColor: 'var(--border)', // Используем --border
     }),
     dropdownIndicator: (provided: any) => ({
       ...provided,
-      color: 'var(--black)',
+      color: 'var(--text)', // Используем --text
     }),
   };
 

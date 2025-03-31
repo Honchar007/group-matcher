@@ -29,7 +29,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Gruppen für Deutsch-Sprachpraxis</h1>
+      <header>
+        <h1>Gruppen für Deutsch-Sprachpraxis</h1>
+      </header>
       <GroupMemberCard onAdd={handleAddParticipant} />
       <ParticipantList participants={participants} />
       <StyledButton onClick={handleGeneratePairs} classNames="create-btn">
