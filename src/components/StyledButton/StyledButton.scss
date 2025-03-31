@@ -1,0 +1,42 @@
+@import '../../assets/scss/variables';
+
+@import '../../assets/scss/typography';
+
+.button {
+  @include typo-btn;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+  border: 2px solid var(--blue-300);
+  border-radius: 8px;
+  transition: all 0.5s;
+  .button-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--gray-800);
+  }
+
+  &.primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+
+    .button-text {
+      color: var(--white);
+    }
+  }
+
+  &:hover {
+    border-color: var(--primary)
+  }
+
+  &:disabled {
+    border-color: var(--blue-300);
+    background-color: var(--blue-300);
+    cursor: default;
+  }
+}

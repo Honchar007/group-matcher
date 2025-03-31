@@ -1,0 +1,46 @@
+@import '../../assets/scss/variables';
+
+@import '../../assets/scss/typography';
+
+.participant-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--light-gray-100);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.participant-list-wrapper h2 {
+  @include typo-h2;
+
+  color: var(--primary);
+}
+
+.participant-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .participant-card {
+    @include typo-paragraph;
+
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 12px -5px rgba(0,0,0,0.5);
+    color: var(--dark-gray-700);
+  }
+}
+
+.participant-list-wrapper li:nth-child(odd) {
+  background-color: var(--light_gray-200);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.participant-list-wrapper li:nth-child(even) {
+  background-color: var(--light_gray-300);
+  padding: 10px;
+  border-radius: 4px;
+}

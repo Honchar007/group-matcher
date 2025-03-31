@@ -1,0 +1,37 @@
+@import '../../assets/scss/variables';
+
+@import '../../assets/scss/typography';
+
+.group-list {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.group {
+  background-color: var(--white);
+  border: 1px solid var(--error);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.group h3 {
+  @include typo-h3;
+
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--error);
+}
+
+.group ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.group li {
+  @include typo-h3;
+  
+  font-size: 1rem;
+  color: var(--gray-500);
+}
+
