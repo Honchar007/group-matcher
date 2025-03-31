@@ -2,6 +2,10 @@
 
 @import '../../assets/scss/typography';
 
+
+.select {
+  padding: 12px;
+}
 .button {
   @include typo-btn;
 
